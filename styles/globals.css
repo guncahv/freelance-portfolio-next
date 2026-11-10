@@ -1,0 +1,75 @@
+/*
+ * Тема поверх Bootstrap 5.3. Собственный CSS сведён к минимуму:
+ * переопределяются только CSS-переменные Bootstrap (цвета и шрифты из ЛР №17),
+ * вся раскладка, отступы и выравнивание — утилитарными классами Bootstrap.
+ */
+:root {
+  --bs-primary: #4f46e5;
+  --bs-primary-rgb: 79, 70, 229;
+  --bs-primary-bg-subtle: #eef2ff;
+  --bs-primary-text-emphasis: #3730a3;
+  --bs-success: #10b981;
+  --bs-success-rgb: 16, 185, 129;
+  --bs-danger: #dc2626;
+  --bs-danger-rgb: 220, 38, 38;
+  --bs-body-font-family: 'Inter', 'Segoe UI', sans-serif;
+  --bs-body-color: #0f172a;
+  --bs-secondary-color: #475569;
+  --bs-body-bg: #f8fafc;
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-lg: 1.25rem;
+  --bs-link-color-rgb: 79, 70, 229;
+  --bs-focus-ring-color: rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary {
+  --bs-btn-bg: #4f46e5;
+  --bs-btn-border-color: #4f46e5;
+  --bs-btn-hover-bg: #4338ca;
+  --bs-btn-hover-border-color: #4338ca;
+  --bs-btn-active-bg: #3730a3;
+  --bs-btn-active-border-color: #3730a3;
+  --bs-btn-disabled-bg: #4f46e5;
+  --bs-btn-disabled-border-color: #4f46e5;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #4f46e5;
+  --bs-btn-border-color: #c7d2fe;
+  --bs-btn-hover-bg: #eef2ff;
+  --bs-btn-hover-color: #3730a3;
+  --bs-btn-hover-border-color: #a5b4fc;
+  --bs-btn-active-bg: #e0e7ff;
+  --bs-btn-active-color: #3730a3;
+  --bs-btn-active-border-color: #a5b4fc;
+}
+
+.form-control:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-weight: 800;
+}
+
+/* Иконка из SVG-ассета ЛР №17, перекрашиваемая через currentColor */
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+}
+
+/* Обложка карточки: одинаковые пропорции во всех колонках сетки */
+.card-img-top {
+  aspect-ratio: 9 / 5;
+  object-fit: cover;
+}
